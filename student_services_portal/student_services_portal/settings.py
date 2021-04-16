@@ -84,7 +84,7 @@ DATABASES = {
         'USER': 'student_services_portal',
         'PASSWORD': 'student_services_password',
         'HOST':'localhost',
-        'PORT':'3306',
+        'PORT':'8799',
     }
 }
 
