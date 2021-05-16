@@ -1,0 +1,61 @@
+{% extends 'hod_template/base_template.html' %}
+{% load static %}
+{% block main_content %}
+
+<div class="header-advance-area">
+  <!--    Form-->
+  <div class="single-pro-review-area mt-t-30 mg-b-15">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="product-payment-inner-st">
+            <ul id="myTabedu1" class="tab-review-design">
+              <li class="active"><a href="#description">Manage Subject</a></li>
+            </ul>
+            <div class="product-status-wrap drp-lst">
+              <div class="add-product">
+                <a href="/add_subject">Add Subject</a>
+              </div>
+              <div class="asset-inner">
+                <table>
+                  <tr>
+                    <th>Id</th>
+                    <th>Subject Name</th>
+                    <th>Course Name</th>
+                    <th>Course ID</th>
+                    <th>Staff Name</th>
+                    <th>Action</th>
+
+                  </tr>
+                  {% for subject in subjects %}
+                  <tr>
+                    <td>{{ subject.id }}</td>
+                    <td>{{ subject.subject_name }}</td>
+                    <td>{{ subject.course_id.course_name }}</td>
+                    <td>{{ subject.course_id.id }}</td>
+                    <td>{{ subject.staff_id.first_name }} {{ subject.staff_id.last_name }}</td>
+                    <td><a href="/edit_subject/{{ subject.id }}"class="pd-setting">Edit</a></td>
+                  </tr>
+                  {% endfor %}
+                </table>
+              </div>
+              <div class="custom-pagination">
+                <nav aria-label="Page navigation example">
+                  <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock main_content %}

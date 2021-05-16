@@ -1,0 +1,76 @@
+{% load static %}
+<div class="left-sidebar-pro">
+  <nav id="sidebar" class="">
+    <div class="sidebar-header">
+      <a href="/admin_home"><img class="main-logo" width="200" height="60" src="{% static "plugin/img/logo/logo3.jpg" %}" /></a>
+      <strong><a href="/admin_home"><img width="60" height="60" src="{% static "plugin/img/logo/logoacesm.png" %}" alt="q" /></a></strong>
+    </div>
+    <div class="left-custom-menu-adp-wrap comment-scrollbar" style="padding-top: 10px">
+      <nav class="sidebar-nav left-sidebar-menu-pro">
+        <ul class="metismenu" id="menu1">
+            <li>
+                <a href="{% url 'admin_home' %}" aria-expanded="false"><span class="educate-icon educate-home icon-wrap"></span> <span class="mini-click-non">Home</span></a>
+            </li>
+            <li>
+            <a class="has-arrow" href="#" aria-expanded="false"><span class="educate-icon educate-professor icon-wrap"></span> <span class="mini-click-non">Staff</span></a>
+            <ul class="submenu-angle" aria-expanded="false">
+              <li><a title="Add Staff" href="{% url 'add_staff' %}"><span class="mini-sub-pro">Add Staff</span></a></li>
+              <li><a title="Manage Staff" href="{% url 'manage_staff' %}"><span class="mini-sub-pro">Manage Staff</span></a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="has-arrow" href="#" aria-expanded="false"><span class="educate-icon educate-student icon-wrap"></span> <span class="mini-click-non">Students</span></a>
+            <ul class="submenu-angle" aria-expanded="false">
+<!--              <li><a title="All Students" href="all-students.html"><span class="mini-sub-pro">All Students</span></a></li>-->
+              <li><a title="Add Student" href="{% url 'add_student' %}"><span class="mini-sub-pro">Add Student</span></a></li>
+              <li><a title="Manage Students" href="{% url 'manage_student' %}"><span class="mini-sub-pro">Manage Students</span></a></li>
+<!--              <li><a title="Students Profile" href="student-profile.html"><span class="mini-sub-pro">Student Profile</span></a></li>-->
+            </ul>
+          </li>
+          <li>
+            <a class="has-arrow" href="#" aria-expanded="false"><span class="educate-icon educate-course icon-wrap"></span> <span class="mini-click-non">Courses</span></a>
+            <ul class="submenu-angle" aria-expanded="false">
+             <li><a title="Add Course" href="{% url 'add_course' %}"><span class="mini-sub-pro">Add Course</span></a></li>
+              <li><a title="Manage Courses" href="{% url 'manage_course' %}"><span class="mini-sub-pro">Manage Course</span></a></li>
+  </ul>
+          </li>
+          <li>
+            <a class="has-arrow" href="#" aria-expanded="false"><span class="educate-icon educate-library icon-wrap"></span> <span class="mini-click-non">Subjects</span></a>
+            <ul class="submenu-angle" aria-expanded="false">
+<!--              <li><a title="All Library" href="library-assets.html"><span class="mini-sub-pro">Library Assets</span></a></li>-->
+              <li><a title="Add Subject" href="{% url 'add_subject' %}"><span class="mini-sub-pro">Add Subject</span></a></li>
+              <li><a title="Manage Subjects" href="{% url 'manage_subject' %}"><span class="mini-sub-pro">Manage Subjects</span></a></li>
+            </ul>
+          </li>
+            <li>
+                <a class="has-arrow" href="#" aria-expanded="false"><span class="educate-icon educate-library icon-wrap"></span> <span class="mini-click-non">Session</span></a>
+                <ul class="submenu-angle" aria-expanded="false">
+                    <li><a title="Add Subject" href="{% url 'add_subject' %}"><span class="mini-sub-pro">Add Subject</span></a></li>
+                    <li><a title="Manage Session" href="{% url 'manage_session' %}"><span class="mini-sub-pro">Manage Session Year</span></a></li>
+                </ul>
+            </li>
+          <li>
+            <a href="attendance.html" aria-expanded="false"><span class="educate-icon educate-department icon-wrap"></span> <span class="mini-click-non">View Attendance</span></a>
+
+          </li>
+          <li>
+            <a class="has-arrow" href="#" aria-expanded="false"><span class="educate-icon educate-message icon-wrap"></span> <span class="mini-click-non">FeedBack</span></a>
+            <ul class="submenu-angle" aria-expanded="false">
+              <li><a title="Staff FeedBack" href="staff_feedback"><span class="mini-sub-pro">Staff FeedBack</span></a></li>
+              <li><a title="Student FeedBack" href="student_feedback"><span class="mini-sub-pro">Student FeedBack</span></a></li>
+<!--              <li><a title="Compose Mail" href="mailbox-compose.html"><span class="mini-sub-pro">Compose Mail</span></a></li>-->
+            </ul>
+          </li>
+          <li>
+            <a class="has-arrow" href="#" aria-expanded="false"><span class="educate-icon educate-interface icon-wrap"></span> <span class="mini-click-non">Leave</span></a>
+            <ul class="submenu-angle interface-mini-nb-dp" aria-expanded="false">
+              <li><a title="Staff Leave" href="staff_leave"><span class="mini-sub-pro">Staff Leave</span></a></li>
+              <li><a title="Student Leave" href="student_leave"><span class="mini-sub-pro">Student Leave</span></a></li>
+  </ul>
+          </li>
+
+        </ul>
+      </nav>
+    </div>
+  </nav>
+</div>

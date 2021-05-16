@@ -27,6 +27,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+MEDIA_URL="/media/"
+MEDIA_ROOT=os.path.join(BASE_DIR,"media")
+
+STATIC_URL="/static/"
+STATIC_ROOT=os.path.join(BASE_DIR,"static")
 
 # Application definition
 
@@ -48,6 +53,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'student_services_app.LoginCheckMiddleWare.LoginCheckMiddleWare'
 ]
 
 ROOT_URLCONF = 'student_services_portal.urls'
@@ -84,7 +90,7 @@ DATABASES = {
         'USER': 'student_services_portal',
         'PASSWORD': 'student_services_password',
         'HOST':'localhost',
-        'PORT':'8799',
+        'PORT':'3306',
     }
 }
 
@@ -126,3 +132,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+AUTH_USER_MODEL="student_services_app.CustomUser"
+AUTHENTICATION_BACKENDS=['student_services_app.EmailBackEnd.EmailBackEnd']

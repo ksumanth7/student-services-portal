@@ -1,0 +1,25 @@
+{% load static %}
+<div class="left-sidebar-pro">
+  <nav id="sidebar" class="">
+    <div class="sidebar-header">
+      <a href="/admin_home"><img class="main-logo" width="200" height="60" src="{% static "plugin/img/logo/logo3.jpg" %}" /></a>
+      <strong><a href="/admin_home"><img width="60" height="60" src="{% static "plugin/img/logo/logoacesm.png" %}" alt="q" /></a></strong>
+    </div>
+    <div class="left-custom-menu-adp-wrap comment-scrollbar" style="padding-top: 10px">
+      <nav class="sidebar-nav left-sidebar-menu-pro">
+        <ul class="metismenu" id="menu1">
+            <li>
+                <a href="{% url 'staff_home' %}" aria-expanded="false"><span class="educate-icon educate-home icon-wrap"></span> <span class="mini-click-non">Home</span></a>
+            </li>
+            <li>
+                <a class="has-arrow" href="#" aria-expanded="false"><span class="educate-icon educate-professor icon-wrap"></span> <span class="mini-click-non">Attendance</span></a>
+                <ul class="submenu-angle" aria-expanded="false">
+                    <li><a title="Take Attendance" href="{% url 'staff_take_attendance' %}"><span class="mini-sub-pro">Take Attendance</span></a></li>
+                    <li><a title="View/Update" href="{% url 'staff_update_attendance' %}"><span class="mini-sub-pro">View/Update</span></a></li>
+                </ul>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </nav>
+</div>
